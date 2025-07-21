@@ -21,7 +21,15 @@ O arquivo package.json simplifica a identificação, gerenciamento e instalaçã
 pacote. É por isso que é essencial incluir um arquivo package.json antes de publicar
 projetos no registro npm.
 
+Obs.: O npm vem junto com o NODE JS
 ---
+
+Comando Atalho Descrição
+
+
+## PRINCIPAIS COMANDOS NPM
+
+<img width="885" height="255" alt="image" src="https://github.com/user-attachments/assets/e4dd60de-9b57-4df5-bee2-d8160fe2b5b8" />
 
 
 
