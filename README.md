@@ -34,6 +34,8 @@ Comando Atalho Descrição
 
 ---
 
+## COMANDOS E ARQUIVOS DO NPM
+<h4>Inicializando o gerenciador de pacotes da aplicação:</h4>
 <img width="722" height="425" alt="image" src="https://github.com/user-attachments/assets/a2d17a34-8669-4dd1-a727-2fd32d36eb6c" />
 
 
