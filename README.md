@@ -38,5 +38,12 @@ Comando Atalho Descrição
 <h4>Inicializando o gerenciador de pacotes da aplicação:</h4>
 <img width="722" height="425" alt="image" src="https://github.com/user-attachments/assets/a2d17a34-8669-4dd1-a727-2fd32d36eb6c" />
 
+---
 
+## INSTALANDO PACOTE EXPRESS COM NPM
+<h4>Express.js é um framework web para Node.js, projetado para simplificar o processo de desenvolvimento de
+aplicações web e APIs. Ele fornece uma série de funcionalidades robustas para criar servidores HTTP de maneira
+eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
+
+<img width="726" height="309" alt="image" src="https://github.com/user-attachments/assets/e92b95df-280b-4dcf-9578-468fc2b6ce10" />
 
