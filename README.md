@@ -60,5 +60,5 @@ const app = express() <br/>
 //Criar porta para rodar o servidor <br/>
 const port = 3333; <br/>
 <br/>
-//Executar servidor express 
+//Executar servidor express  <br/>
 app.listen(port, () => console.log(`rodando na porta ${port}`))
