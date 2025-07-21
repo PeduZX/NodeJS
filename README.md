@@ -52,7 +52,7 @@ eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
 ## CONFIGURANDO EXPRESS
 <h4>Construir código de configuração:</h4>
 
- <h2>Código Em JS:</h2>
+ <h2>Código Em JS:</h2> <br/>
 //Solicitar pacote instalado
 const express = require("express")
 //Instanciar express na constante app 
