@@ -47,3 +47,18 @@ eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
 
 <img width="726" height="309" alt="image" src="https://github.com/user-attachments/assets/e92b95df-280b-4dcf-9578-468fc2b6ce10" />
 
+---
+
+## CONFIGURANDO EXPRESS
+<h4>Construir código de configuração:</h4>
+
+ <h2>Código Em JS:</h2>
+//Solicitar pacote instalado
+const express = require("express")
+//Instanciar express na constante app
+const app = express()
+//Criar porta para rodar o servidor
+const port = 3333;
+
+//Executar servidor express
+app.listen(port, () => console.log(`rodando na porta ${port}`))
