@@ -32,4 +32,9 @@ Comando Atalho Descrição
 <img width="885" height="255" alt="image" src="https://github.com/user-attachments/assets/e4dd60de-9b57-4df5-bee2-d8160fe2b5b8" />
 
 
+---
+
+<img width="722" height="425" alt="image" src="https://github.com/user-attachments/assets/a2d17a34-8669-4dd1-a727-2fd32d36eb6c" />
+
+
 
