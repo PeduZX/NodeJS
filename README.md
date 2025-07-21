@@ -52,13 +52,13 @@ eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
 ## CONFIGURANDO EXPRESS
 <h4>Construir código de configuração:</h4>
 
- <h2>Código Em JS:</h2> <br/>
+ <h2>Código Em JS:</h2>
 //Solicitar pacote instalado
-const express = require("express")
-//Instanciar express na constante app 
-const app = express() 
-//Criar porta para rodar o servidor 
-const port = 3333;\n
+const express = require("express") <br/>
+//Instanciar express na constante app <br/> 
+const app = express() <br/> 
+//Criar porta para rodar o servidor <br/>
+const port = 3333; <br/>
 
 //Executar servidor express 
 app.listen(port, () => console.log(`rodando na porta ${port}`))
