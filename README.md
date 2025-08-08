@@ -5,6 +5,10 @@
 - 📘  https://nodejs.org/pt/download 
 
 ---
+## Resultado Geral ->
+<img width="632" height="766" alt="image" src="https://github.com/user-attachments/assets/590509d0-ff22-4610-97f4-b8c522e73c91" />
+
+
 <img width="626" height="218" alt="image" src="https://github.com/user-attachments/assets/ff85a9db-8c1c-4967-ad90-01066025705c" />
 
 <img width="626" height="339" alt="image" src="https://github.com/user-attachments/assets/0b1efd47-6e10-4c97-a313-e7a4b24493fa" />
