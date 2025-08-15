@@ -53,6 +53,9 @@ eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
 <img width="726" height="309" alt="image" src="https://github.com/user-attachments/assets/e92b95df-280b-4dcf-9578-468fc2b6ce10" />
 
 ---
+<img width="969" height="229" alt="image" src="https://github.com/user-attachments/assets/f9d8edc1-3b2a-4755-9cb6-04eb600f1d30" />
+
+--
 
 ## CONFIGURANDO EXPRESS
 <h4>Construir código de configuração:</h4>
