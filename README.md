@@ -60,13 +60,150 @@ eficiente. Com o terminal aberto, execute o comando a seguir:</h4>
 ## CONFIGURANDO EXPRESS
 <h4>Construir código de configuração:</h4>
 
- <h2>Código Em JS:</h2>
-//Solicitar pacote instalado <br/>
-const express = require("express") <br/>
-//Instanciar express na constante app <br/> 
-const app = express() <br/> 
-//Criar porta para rodar o servidor <br/>
-const port = 3333; <br/>
-<br/>
-//Executar servidor express  <br/>
-app.listen(port, () => console.log(`rodando na porta ${port}`))
+ ## Código pra rodar o banco
+## SERVER.JS
+----------------
+
+//Importar pacotes para aplicação
+const express = require("express");
+const cors = require("cors");
+const connection = require("./db_config");
+//Definir a porta e instanciar o express
+const porta = 3000;
+const app = express();
+//Habilitar o cors e utilização de JSON
+app.use(cors());
+app.use(express.json());
+// Testar API
+
+// Rota post para cadastrar novo usuario
+app.post("/usuarios/cadastrar", (request, response) => {
+  // Criar um array  com os dados recebidos
+  let params = Array(
+    request.body.name,
+    request.body.email,
+    request.body.password,
+    request.body.cpf_number
+  );
+
+  // Criar comando de execução no banco de dados
+  let query =
+    "INSERT INTO users(name, email, password, cpf_number) VALUES( ? ,? ,? ,? );";
+
+  // Passar comando e os dados para função query
+  connection.query(query, params, (err, results) => {
+    if (results) {
+      response.status(201).json({
+        success: true,
+        message: "Sucesso",
+        data: results,
+      });
+    } else {
+      response.status(400).json({
+        success: false,
+        message: "Sem sucesso",
+        data: err,
+      });
+    }
+  });
+});
+
+app.get("/usuario/listar", (request, response) => {
+  const query = "SELECT * FROM users";
+
+  connection.query(query, (err, results) => {
+    if (results) {
+      response.status(200).json({
+        success: true,
+        message: "Sucesso!",
+        data: results,
+      });
+    } else {
+      response.status(400).json({
+        success: false,
+        message: "Sem sucesso!",
+        data: err,
+      });
+    }
+  });
+});
+
+app.put("/usuario/editar/:id", (request, response) => {
+
+  let params = Array(
+    request.body.name, 
+    request.params.id
+    );
+  
+  let query = "UPDATE users SET name = ? WHERE id = ?";
+  
+  connection.query(query, params, (err, results) => {
+    if (results) {
+      response.status(200).json({
+        success: true,
+        message: "Sucesso",
+        data: results,
+      });
+    } else {
+      response.status(400).json({
+        success: false,
+        message: "Sem Sucesso",
+        data: err,
+      });
+    }
+  });
+
+})
+
+app.delete("/usuario/deletar/:id", (request, response) => {
+let params = Array(
+  request.params.id
+  );
+
+let query = "DELETE FROM users WHERE id = ?;";
+
+connection.query(query, params, (err, results) => {
+  if (results) {
+    response.status(200).json({
+      success: true,
+      message: "Sucesso",
+      data: results,
+    });
+  } else {
+    response.status(400).json({
+      success: false,
+      message: "Sem Sucesso",
+      data: err,
+    });
+  }
+});
+})
+
+
+app.listen(porta, () => console.log(`Rodando na porta ${porta}`));
+// Importar conexão com o banco
+
+
+
+
+
+##DB_CONFIG
+// Importar pacote do MySql
+const mysql = require('mysql2');
+// Criar conexão com o banco de dados
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'crud_api',
+});
+// Testar conexão
+connection.connect((err) => {
+    if(err){
+        throw err;
+    } else {
+        console.log("MySql Conectado")
+    }
+});
+
+module.exports = connection;
